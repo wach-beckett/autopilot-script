@@ -23,8 +23,7 @@ catch {
 }
 
 # Run Windows AutoPilot script with GroupTag (Asset Tag)
-try {
-    Get-WindowsAutoPilotInfo.ps1 -Online -GroupTag $assetTag -ErrorAction Stop
+try {   
     Write-Output "$(Get-Date): Autopilot device information uploaded successfully with Asset Tag: $assetTag." | Out-File $LogFile -Append
 }
 catch {
